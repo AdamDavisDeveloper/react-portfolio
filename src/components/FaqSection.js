@@ -1,6 +1,6 @@
 //Styled Components
-import styled from 'styled-components';
-import {About} from '../styles';
+import styled from "styled-components";
+import { About } from "../styles";
 
 const FaqSection = () => {
   return (
@@ -59,7 +59,7 @@ const FaqSection = () => {
 const Faq = styled(About)`
   display: block;
   span {
-    display: block
+    display: block;
   }
   h2 {
     padding-bottom: 2rem;
