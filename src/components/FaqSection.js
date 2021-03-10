@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { About } from "../styles";
 //Toggle Components
 import Toggle from "./Toggle";
+//Shared Layout
+import { AnimateSharedLayout } from "framer-motion";
 
 const FaqSection = () => {
   return (
@@ -10,52 +12,44 @@ const FaqSection = () => {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-      <Toggle>
-      <div className="question">
-        <h4>How do I start?</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-            labore.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      </Toggle>
-      <div className="question">
-        <h4>Daily Schedule</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-            labore.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Daily Payments?</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-            labore.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>What products do you offer?</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-            labore.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+      <AnimateSharedLayout>
+        <Toggle title="How do I start?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              labore.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Daily Schedule">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              labore.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Daily Payments?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              labore.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="What products do you offer?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              labore.
+            </p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 };
