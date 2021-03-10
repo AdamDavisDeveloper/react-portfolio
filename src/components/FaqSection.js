@@ -1,6 +1,8 @@
 //Styled Components
 import styled from "styled-components";
 import { About } from "../styles";
+//Toggle Components
+import Toggle from "./Toggle";
 
 const FaqSection = () => {
   return (
@@ -8,6 +10,7 @@ const FaqSection = () => {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
+      <Toggle>
       <div className="question">
         <h4>How do I start?</h4>
         <div className="answer">
@@ -19,6 +22,7 @@ const FaqSection = () => {
         </div>
         <div className="faq-line"></div>
       </div>
+      </Toggle>
       <div className="question">
         <h4>Daily Schedule</h4>
         <div className="answer">

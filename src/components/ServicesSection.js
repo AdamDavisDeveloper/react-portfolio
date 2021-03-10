@@ -34,7 +34,7 @@ const ServicesSection = () => {
           <Card>
             <div className="icon">
               <img src={diaphragm} alt="icon" />
-              <h3>Diagragm</h3>
+              <h3>Diaphragm</h3>
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
