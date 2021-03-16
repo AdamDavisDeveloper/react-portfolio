@@ -8,6 +8,12 @@ import home2 from "../img/home2.png";
 //Styled Components
 import styled from 'styled-components';
 import { About, Description, Image } from '../styles';
+// Intersection Observer
+// eslint-disable-next-line
+import { useInView } from 'react-intersection-observer';
+//Framer Motion
+// eslint-disable-next-line
+import { useAnimation } from "framer-motion";
 
 const ServicesSection = () => {
   return (
