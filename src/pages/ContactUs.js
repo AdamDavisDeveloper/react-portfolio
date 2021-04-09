@@ -1,11 +1,13 @@
 //Framer Motion
 import { motion } from "framer-motion";
 //Animations
-import { pageAnimation } from "../animation";
+import { pageAnimation, titleAnim } from "../animation";
+// Styled Components
+import styled from "styled-components";
 
 const ContactUs = () => {
   return (
-    <motion.div
+    <ContactStyle
       exit="exit"
       variants={pageAnimation}
       initial="hidden"
@@ -13,8 +15,20 @@ const ContactUs = () => {
       style={{ background: "#fff" }}
     >
       <h1>Contact Us</h1>
-    </motion.div>
+    </ContactStyle>
   );
 };
+
+//Styles
+const ContactStyle = styled(motion.div)`
+  padding: 5rem 10rem;
+  color: #353535;
+  min-height: 90vh;
+`;
+
+const Title = styled.div`
+  margin-bottom: 4rem;
+  color: #000000;
+`;
 
 export default ContactUs;
