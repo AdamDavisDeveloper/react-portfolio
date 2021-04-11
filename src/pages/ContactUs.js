@@ -14,7 +14,11 @@ const ContactUs = () => {
       animate="show"
       style={{ background: "#fff" }}
     >
-      <h1>Contact Us</h1>
+      <Title>
+        <Hide>
+          <motion.h2>Get in touch.</motion.h2>
+        </Hide>
+      </Title>
     </ContactStyle>
   );
 };
@@ -29,6 +33,10 @@ const ContactStyle = styled(motion.div)`
 const Title = styled.div`
   margin-bottom: 4rem;
   color: #000000;
+`;
+
+const Hide = styled.div`
+  overflow: hidden;
 `;
 
 export default ContactUs;
