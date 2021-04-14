@@ -1,8 +1,7 @@
-//Framer Motion
-import { motion } from "framer-motion";
+import React from "react";
 //Animations
+import { motion } from "framer-motion";
 import { pageAnimation, titleAnim } from "../animation";
-// Styled Components
 import styled from "styled-components";
 
 const ContactUs = () => {
@@ -16,43 +15,58 @@ const ContactUs = () => {
     >
       <Title>
         <Hide>
-          <motion.h2>Get in touch.</motion.h2>
+          <motion.h2 variants={titleAnim}>Get in touch.</motion.h2>
         </Hide>
       </Title>
       <div>
-        <Social>
-          <Circle>
-            <h2>Send us a message!</h2>
-          </Circle>
-        </Social>
+        <Hide>
+          <Social variants={titleAnim}>
+            <Circle />
+            <h2>Send Us A Message</h2>
+          </Social>
+        </Hide>
+        <Hide>
+          <Social variants={titleAnim}>
+            <Circle />
+            <h2>Send an email.</h2>
+          </Social>
+        </Hide>
+        <Hide>
+          <Social variants={titleAnim}>
+            <Circle />
+            <h2>Social Media</h2>
+          </Social>
+        </Hide>
       </div>
     </ContactStyle>
   );
 };
 
-//Styles
 const ContactStyle = styled(motion.div)`
   padding: 5rem 10rem;
   color: #353535;
   min-height: 90vh;
+  @media (max-width: 1500px) {
+    padding: 2rem;
+    font-size: 1rem;
+  }
 `;
-
 const Title = styled.div`
   margin-bottom: 4rem;
-  color: #000000;
+  color: black;
+  @media (max-width: 1500px) {
+    margin-top: 5rem;
+  }
 `;
-
 const Hide = styled.div`
   overflow: hidden;
 `;
-
 const Circle = styled.div`
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
   background: #353535;
 `;
-
 const Social = styled(motion.div)`
   display: flex;
   align-items: center;
