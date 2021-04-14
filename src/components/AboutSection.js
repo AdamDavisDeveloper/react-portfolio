@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 const AboutSection = () => {
   return (
     <About>
+      <Wave />
       <Description>
         <motion.div className="title">
           <Hide>
@@ -40,7 +41,6 @@ const AboutSection = () => {
       <Image>
         <motion.img variants={photoAnim} src={home1} alt="" />
       </Image>
-      <Wave />
     </About>
   );
 };

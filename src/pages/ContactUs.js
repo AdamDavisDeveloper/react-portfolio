@@ -51,9 +51,8 @@ const ContactStyle = styled(motion.div)`
   min-height: 90vh;
   @media (max-width: 1500px) {
     padding: 2rem;
-    font-size: 1rem;
     h2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
   }
 `;
