@@ -9,6 +9,7 @@ const ScrollTop = () => {
       left: 0,
     });
   }, [pathname]);
+  return null;
 };
 
 export default ScrollTop;
