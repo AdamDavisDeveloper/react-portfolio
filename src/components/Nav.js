@@ -13,13 +13,13 @@ const Nav = () => {
       </h1>
       <ul>
         <li>
-          <Link to="/">1. About us</Link>
+          <Link to="/">1. About me</Link>
         </li>
         <li>
-          <Link to="/work">2. Our Work</Link>
+          <Link to="/work">2. My Work</Link>
         </li>
         <li>
-          <Link to="/contact">3. Contact us</Link>
+          <Link to="/contact">3. Contact me</Link>
         </li>
       </ul>
     </StyledNav>
@@ -58,11 +58,11 @@ const StyledNav = styled.div`
     flex-direction: column;
     padding: 1rem;
     #logo {
-      padding: 5rem;
+      padding: 2rem;
       font-size: 3rem;
     }
     ul {
-      padding: 2rem;
+      padding: 1rem;
       justify-content: space-around;
       width: 100%;
     }

@@ -29,10 +29,6 @@ export const Description = styled.div`
     button {
       margin: 2rem 0rem 5rem 0rem;
     }
-    p {
-      width: 70%;
-      margin: auto;
-    }
   }
 `;
 
