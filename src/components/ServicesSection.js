@@ -92,6 +92,19 @@ const Card = styled.div`
       padding: 1rem;
     }
   }
+  @media (max-width: 1008px) {
+    justify-content: center;
+    flex-basis: 15rem;
+    .icon {
+      display: block;
+      img {
+        margin-bottom: 1rem;
+      }
+    }
+    p {
+      align-items: center;
+    }
+  }
 `;
 
 export default ServicesSection;
