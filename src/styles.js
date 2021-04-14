@@ -9,6 +9,11 @@ export const About = styled(motion.div)`
   justify-content: space-between;
   padding: 5rem 10rem;
   color: white;
+  @media (max-width: 1000px) {
+    display: block;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
 `;
 
 export const Description = styled.div`
@@ -17,6 +22,17 @@ export const Description = styled.div`
   z-index: 2;
   h2 {
     font-weight: lighter;
+  }
+  @media (max-width: 1000px) {
+    padding: 0;
+    margin-top: 2rem;
+    button {
+      margin: 2rem 0rem 5rem 0rem;
+    }
+    p {
+      width: 70%;
+      margin: auto;
+    }
   }
 `;
 

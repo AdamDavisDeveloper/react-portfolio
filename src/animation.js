@@ -58,7 +58,7 @@ export const lineAnim = {
 export const slider = {
   hidden: { x: "-130%", skew: "45deg" },
   show: {
-    x: "130%",
+    x: "200%",
     skew: "-45deg",
     transition: { ease: "easeOut", duration: 1 },
   },

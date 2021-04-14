@@ -15,14 +15,11 @@ html{
     @media (max-width: 1300px){
         font-size: 70%;
     }
-    @media (max-width: 1200px){
+    @media (max-width: 1100px){
         font-size: 65%;
     }
-    @media (max-width: 1100px){
-        font-size: 50%;
-    }
     @media (max-width: 838px){
-        font-size: 45%;
+        font-size: 60%;
     }
     
 }
