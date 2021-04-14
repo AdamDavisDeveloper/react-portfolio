@@ -19,6 +19,8 @@ import {
 } from "../animation";
 // useScroll custom hook
 import { useScroll } from "../components/useScroll";
+//Custom component (scrolls to top of page on url change)
+import ScrollTop from "../components/ScrollTop";
 
 const OurWork = () => {
   const [element, controls] = useScroll();
@@ -65,6 +67,7 @@ const OurWork = () => {
           <img src={goodtimes} alt="good times" />
         </Link>
       </Movie>
+      <ScrollTop />
     </Work>
   );
 };

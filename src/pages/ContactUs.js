@@ -3,6 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { pageAnimation, titleAnim } from "../animation";
 import styled from "styled-components";
+//Custom component (scrolls to top of page on url change)
+import ScrollTop from "../components/ScrollTop";
 
 const ContactUs = () => {
   return (
@@ -38,6 +40,7 @@ const ContactUs = () => {
           </Social>
         </Hide>
       </div>
+      <ScrollTop />
     </ContactStyle>
   );
 };
