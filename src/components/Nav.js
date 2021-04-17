@@ -82,4 +82,9 @@ const StyledNav = styled.div`
   }
 `;
 
+const Line = styled(motion.div)`
+  height: 0.3rem;
+  background: #23d997;
+`;
+
 export default Nav;
