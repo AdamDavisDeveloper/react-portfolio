@@ -1,26 +1,22 @@
-//React
-import { useState, useEffect } from "react";
-//Router
-import { useHistory } from "react-router-dom";
-//Styled Components
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-//Movie State
+import { useHistory } from "react-router-dom";
 import { MovieState } from "../MovieState";
-//Framer Motion
-import { motion } from "framer-motion";
 //Animations
+import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 
 const MovieDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
-  const [movies] = useState(MovieState);
+  const [movies, setMovies] = useState(MovieState);
   const [movie, setMovie] = useState(null);
 
-  //Use Effect
+  //UseEffect
   useEffect(() => {
     const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
     setMovie(currentMovie[0]);
+    console.log(setMovies);
   }, [movies, url]);
 
   return (
@@ -34,7 +30,7 @@ const MovieDetail = () => {
         >
           <HeadLine>
             <h2>{movie.title}</h2>
-            <img src={movie.mainImg} alt="movie-img" />
+            <img src={movie.mainImg} alt="movie" />
           </HeadLine>
           <Awards>
             {movie.awards.map((award) => (
@@ -46,7 +42,7 @@ const MovieDetail = () => {
             ))}
           </Awards>
           <ImageDisplay>
-            <img src={movie.secondaryImg} alt="second-img" />
+            <img src={movie.secondaryImg} alt="movie" />
           </ImageDisplay>
         </Details>
       )}
@@ -57,7 +53,6 @@ const MovieDetail = () => {
 const Details = styled(motion.div)`
   color: white;
 `;
-
 const HeadLine = styled.div`
   min-height: 90vh;
   padding-top: 20vh;
@@ -74,24 +69,17 @@ const HeadLine = styled.div`
     object-fit: cover;
   }
 `;
-
 const Awards = styled.div`
   min-height: 80vh;
   display: flex;
   margin: 5rem 10rem;
   align-items: center;
   justify-content: space-around;
-`;
-
-const ImageDisplay = styled.div`
-  min-height: 50vh;
-  img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+  @media (max-width: 1500px) {
+    display: block;
+    margin: 2rem 2rem;
   }
 `;
-
 const AwardStyle = styled.div`
   padding: 5rem;
   h3 {
@@ -105,6 +93,14 @@ const AwardStyle = styled.div`
   }
   p {
     padding: 2rem 0rem;
+  }
+`;
+const ImageDisplay = styled.div`
+  min-height: 50vh;
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
   }
 `;
 
