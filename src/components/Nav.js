@@ -1,5 +1,7 @@
 //Styled Components
 import styled from "styled-components";
+//Framer Motion
+import { motion } from "framer-motion";
 //Router
 import { Link } from "react-router-dom";
 
