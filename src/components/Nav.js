@@ -16,6 +16,11 @@ const Nav = () => {
       <ul>
         <li>
           <Link to="/">1. About me</Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: "50%" }}
+          />
         </li>
         <li>
           <Link to="/work">2. My Work</Link>
@@ -83,10 +88,13 @@ const StyledNav = styled.div`
     }
   }
 `;
-
+// eslint-disable-next-line
 const Line = styled(motion.div)`
   height: 0.3rem;
   background: #23d997;
+  width: 0%;
+  position: absolute;
+  bottom: -80%;
+  left: 60%;
 `;
-
 export default Nav;
