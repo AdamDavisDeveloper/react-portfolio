@@ -71,6 +71,12 @@ const HeadLine = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+  @media (max-width: 1000px) {
+    h2 {
+      width: 100%;
+      text-align: center;
+    }
+  }
 `;
 const Awards = styled.div`
   min-height: 80vh;
