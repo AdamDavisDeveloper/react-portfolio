@@ -4,8 +4,11 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 //Router
 import { Link } from "react-router-dom";
+//Use Location
+import { useLocation } from "react-router-dom";
 
 const Nav = () => {
+  const { pathname } = useLocation();
   return (
     <StyledNav>
       <h1>
@@ -19,14 +22,24 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
-            animate={{ width: "50%" }}
+            animate={{ width: pathname === "/" ? "50%" : "0%" }}
           />
         </li>
         <li>
           <Link to="/work">2. My Work</Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/work" ? "50%" : "0%" }}
+          />
         </li>
         <li>
           <Link to="/contact">3. Contact me</Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
+          />
         </li>
       </ul>
     </StyledNav>
