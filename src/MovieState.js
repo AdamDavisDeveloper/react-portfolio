@@ -6,6 +6,8 @@ import athlete2 from "./img/athlete2.png";
 import goodtimes2 from "./img/good-times2.jpg";
 import theracer2 from "./img/the-racer2.jpg";
 
+//Objects which will appear in the work sections
+
 export const MovieState = () => {
   return [
     {
